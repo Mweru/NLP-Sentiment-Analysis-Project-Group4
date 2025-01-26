@@ -82,15 +82,15 @@ SVM and XGBoost consistently deliver superior performance in both binary and mul
 tasks, achieving the highest accuracy and F1-scores.
 - Random Forest provides robust results but tends to have slightly more misclassifications than SVM and XGBoost.
 - Logistic Regression serves as a strong baseline model, particularly excelling in interpretability, but lags behind in accuracy compared to the other models. These results suggest that SVM and XGBoost are the most reliable options for tasks prioritizing accuracy and precision. 
-# Recommendations
-- Consider using deep learning models such as LSTMs or transformers for better context
-understanding.
-- Enhance feature engineering by incorporating sentiment lexicons and contextual embeddings.
-- Regularly update the model with new data to keep it relevant.
 
 # Conclusion
 This project successfully developed an NLP model capable of analyzing Twitter sentiment related to Apple and Google products. Based on social media data, this sentiment analysis report provides valuable insights into customer perception of Apple and Google products. The findings reveal a neutral sentiment bias, with a higher volume of tweets mentioning Apple products. Further analysis using machine learning models can help quantify these observations and identify specific aspects influencing sentiment.
 By continuously monitoring social media sentiment, Apple and Google can better understand customer satisfaction and use these insights to improve their products, marketing strategies, and overall customer experience.
+
+# Recommendations
+- Consider using deep learning models such as LSTMs or transformers for better contextunderstanding.
+- Enhance feature engineering by incorporating sentiment lexicons and contextual embeddings.
+- Regularly update the model with new data to keep it relevant.
 
 # Limitations
 This report focuses on a basic sentiment analysis of social media posts. Here are some limitations to
