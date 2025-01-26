@@ -78,19 +78,27 @@ The results of the model training and evaluation highlight the performance of fo
 While Logistic Regression serves as a solid baseline, SVM, Random Forest, and XGBoost demonstrate superior performance, with XGBoost slightly outperforming the others. These results suggest that SVM and XGBoost are the most suitable models for this classification task.
 
 ## Model Evaluation
-SVM and XGBoost consistently deliver superior performance in both binary and multi-class
-tasks, achieving the highest accuracy and F1-scores.
-- Random Forest provides robust results but tends to have slightly more misclassifications than SVM and XGBoost.
-- Logistic Regression serves as a strong baseline model, particularly excelling in interpretability, but lags behind in accuracy compared to the other models. These results suggest that SVM and XGBoost are the most reliable options for tasks prioritizing accuracy and precision. 
+SVM and XGBoost consistently deliver superior performance in both binary and multi-class tasks, achieving the highest accuracy and F1-scores.
+Random Forest provides robust results but tends to have slightly more misclassifications than SVM and XGBoost.
+Logistic Regression serves as a strong baseline model, particularly excelling in interpretability, but lags behind in accuracy compared to the other models.
+These results suggest that for tasks prioritizing accuracy and precision, SVM and XGBoost are the most reliable options.
+
+While the current models (Logistic Regression, SVM, Random Forest, XGBoost) demonstrate strong performance with high accuracy, precision, recall, and F1-scores, there may still be limitations in handling complex sentence structures, nuanced sentiments, and the context-dependent nature of certain terms (e.g., brand names, mixed emotions). These models rely heavily on traditional feature extraction techniques, which may not fully capture the intricate patterns of language, especially for tweets with ambiguous sentiment or mixed emotion. BERT, with its ability to understand context in both directions, has the potential to improve model performance and improve the sentiment analysis process.
+
+We also followed up with a transformer-based model (BERT) in the BERT Transformer Notebook found in this repository.
 
 # Conclusion
-This project successfully developed an NLP model capable of analyzing Twitter sentiment related to Apple and Google products. Based on social media data, this sentiment analysis report provides valuable insights into customer perception of Apple and Google products. The findings reveal a neutral sentiment bias, with a higher volume of tweets mentioning Apple products. Further analysis using machine learning models can help quantify these observations and identify specific aspects influencing sentiment.
-By continuously monitoring social media sentiment, Apple and Google can better understand customer satisfaction and use these insights to improve their products, marketing strategies, and overall customer experience.
+The sentiment analysis revealed that emotions were the most common in tweets, with Apple-related mentions appearing frequently across different sentiment categories.
+Neutral tweets posed the biggest challenge due to their ambiguous language.
+SVM and XGBoost performed best in classifying tweet emotions, while BERT, although used, was not fully optimized for optimal sentiment analysis.
 
 # Recommendations
-- Consider using deep learning models such as LSTMs or transformers for better contextunderstanding.
-- Enhance feature engineering by incorporating sentiment lexicons and contextual embeddings.
-- Regularly update the model with new data to keep it relevant.
+- Prioritize SVM and XGBoost for effective classification of tweet emotions due to their superior performance in sentiment analysis.
+- Further, optimize BERT to better capture the complexities of tweet emotions and improve sentiment classification accuracy or combine BERT with some of the prioritized traditional models(SVM and XGBOOST).
+- Explore Multi-Label Classification: Implement multi-label classification to capture tweets with mixed or overlapping emotions more accurately.
+- Enhance Text Representation: Use more advanced text representation techniques like word embeddings to improve the model's understanding of tweet emotions.
+- Consider using deep learning models such as LSTMs for better context understanding.
+- Performing aspect-based sentiment analysis to understand the specific features of products that evoke positive or negative sentiment.
 
 # Limitations
 This report focuses on a basic sentiment analysis of social media posts. Here are some limitations to
@@ -99,9 +107,7 @@ consider:
 - Sarcasm and other forms of nuanced language can be challenging to detect accurately using sentiment analysis techniques.
 - The report primarily focuses on sentiment classification. Aspect-based sentiment analysis, which identifies the specific aspects of products that users have positive or negative feelings about, could provide even deeper insights.
 
-# Future Work
-Future work could involve:
-- Using a larger and more diverse dataset improves the findings' generalizability.
-- Employing advanced sentiment analysis techniques, such as deep learning models, to handle complex language and sarcasm.
-- Performing aspect-based sentiment analysis to understand the specific features of products that evoke positive or negative sentiment.
-- By addressing these limitations and incorporating future work considerations, companies like Apple and Google can leverage social media sentiment analysis to better understand customer perception and make data-driven decisions for continuous improvement.
+# Next Steps
+- Optimize BERT’s parameters to enhance sentiment analysis, especially for complex tweet emotions.
+- Deploy the Model: Implement the best-performing model to analyze emotions in real-time tweets.
+- Monitor and Retrain: Continuously monitor the model’s performance and retrain it with new tweet data to maintain accuracy.
