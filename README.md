@@ -111,3 +111,6 @@ consider:
 - Optimize BERT’s parameters to enhance sentiment analysis, especially for complex tweet emotions.
 - Deploy the Model: Implement the best-performing model to analyze emotions in real-time tweets.
 - Monitor and Retrain: Continuously monitor the model’s performance and retrain it with new tweet data to maintain accuracy.
+
+# References
+The link to the [data report](https://github.com/Mweru/NLP-Sentiment-Analysis-Project-Group4/blob/main/Sentiment%20Analysis%20of%20Social%20Media%20Posts.pdf)
